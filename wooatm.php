@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: WooCommerce Accordions
-Plugin URI: http://magnigenie.com
+Plugin URI: https://magnigenie.com/
 Description: This plugin allows you to convert your woocommerce tabs to accordion.
-Version: 1.0
+Version: 1.1
 Author: Magnigenie
 Author URI: http://magnigenie.com
 License: GPLv2 or later
@@ -17,12 +17,15 @@ define('WOOATM_FILE', __FILE__);
 define('WOOATM_PATH', plugin_dir_path(__FILE__));
 define('WOOATM_BASE', plugin_basename(__FILE__));
 
+//Plugin Localization
 add_action('plugins_loaded', 'wooatm_load_textdomain');
 
 function wooatm_load_textdomain() {
-	load_plugin_textdomain( 'wooatm', false, dirname( plugin_basename( __FILE__ ) ). '/lang/' );
+	load_plugin_textdomain( 'wooatm', false, dirname( plugin_basename( __FILE__ ) ). '/languages/' );
 }
 
-require WOOATM_PATH . '/includes/class-wooatm.php';
+if( !class_exists('Woo_Accordions') ) {
+	require WOOATM_PATH . '/includes/class-wooatm.php';
+}
 
 new Woo_Accordions();

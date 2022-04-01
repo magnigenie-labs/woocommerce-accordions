@@ -1,9 +1,13 @@
 (function ($) {
-    $('#accordion-container').accordion({
-        firstChildExpand: true,
-        slideSpeed: 500,
-        dropDownIcon: "&#9660",
-    });
+
+	var FirstChildExpand = wooatm.first_child_expand == 'yes' ? true : false;
+	var MultipleExpand = wooatm.multiple_expand == 'yes' ? true : false;
+  $( '#accordion-container' ).accordion({
+  	firstChildExpand : FirstChildExpand,
+    slideSpeed			 : 500,
+    dropDownIcon		 : "&#9660",
+    multiExpand 		 : MultipleExpand,
+  });
 
 	$( 'a.woocommerce-review-link' ).click( function(e) {
 		e.preventDefault();

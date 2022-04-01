@@ -4,7 +4,7 @@
  *
  * @author  MagniGenie
  * @package WooAtm
- * @version 1.0
+ * @version 1.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

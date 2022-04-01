@@ -1,2 +1,0 @@
-# woocommerce-accordions
-Struggling to make your WooCommerce tabs look good on mobile devices? Or looking to replace those traditional tabs which is on every website and replace with accordions?  WooCommerce Accordions would help you to easily convert your WooCommerce tabs to responsive accordion. You can easily change the look and feel of the accordions to match your store design by using the handful of admin options to customise different colors for the accordion.
